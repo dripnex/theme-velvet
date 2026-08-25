@@ -1,0 +1,57 @@
+/**
+ * Velvet — satellite Dripnex theme.
+ * Token layer only. Same contract as a community theme repo.
+ * Must be CommonJS.
+ */
+
+const TOKENS = {
+  '--bg-base': '#1a1216',
+  '--bg-surface': '#22181c',
+  '--bg-elevated': '#2c2026',
+  '--bg-inset': '#140e11',
+  '--bg-hover': 'rgba(240, 228, 234, 0.06)',
+  '--bg-active': 'rgba(240, 228, 234, 0.1)',
+  '--text-primary': '#f0e4ea',
+  '--text-secondary': 'rgba(240, 228, 234, 0.74)',
+  '--text-muted': 'rgba(240, 228, 234, 0.52)',
+  '--text-faint': 'rgba(240, 228, 234, 0.34)',
+  '--border': 'rgba(240, 228, 234, 0.12)',
+  '--border-subtle': 'rgba(240, 228, 234, 0.07)',
+  '--border-strong': 'rgba(240, 228, 234, 0.18)',
+  '--accent': '#c48b9f',
+  '--accent-hover': '#d4a3b4',
+  '--accent-muted': 'rgba(196, 139, 159, 0.2)',
+  '--accent-subtle': 'rgba(196, 139, 159, 0.1)',
+  '--glass-bg': 'rgba(26, 18, 22, 0.92)',
+  '--glass-border': 'rgba(240, 228, 234, 0.1)',
+  '--glass-bg-menu': 'rgba(44, 32, 38, 0.96)',
+  '--glass-border-menu': 'rgba(240, 228, 234, 0.1)',
+  '--status-active': '#c48b9f',
+  '--status-on-hold': '#c9a44a',
+  '--status-completed': '#7aaa8a',
+  '--status-dropped': '#b45a6a',
+};
+
+module.exports = {
+  id: 'theme-velvet',
+  name: 'Velvet',
+  version: '0.1.0',
+  description: 'Wine-dark. Dusty rose, not neon violet.',
+
+  activate(context) {
+    const remove = context.registerTheme({
+      id: 'dripnex-velvet',
+      name: 'Velvet',
+      description: 'Mauve ink on wine black. Soft, not electric.',
+      author: 'Dripnex',
+      colorScheme: 'dark',
+      tokens: TOKENS,
+    });
+
+    return {
+      dispose() {
+        remove();
+      },
+    };
+  },
+};

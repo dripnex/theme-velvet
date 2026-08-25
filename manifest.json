@@ -1,0 +1,7 @@
+{
+  "id": "theme-velvet",
+  "name": "Velvet",
+  "version": "0.1.0",
+  "description": "Wine-dark. Dusty rose, not neon violet.",
+  "main": "dist/index.js"
+}
